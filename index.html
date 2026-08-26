@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#090104">
+
+<title>Happy Birthday, My Love ❤️</title>
+
+<style>
+
+/* =========================================================
+   BASIC RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #070104;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(160, 0, 45, 0.35),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(255, 0, 70, 0.20),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(100, 0, 30, 0.30),
+            transparent 40%
+        );
+
+    z-index: -2;
+}
+
+
+/* =========================================================
+   FLOATING HEARTS
+========================================================= */
+
+.hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.heart {
+    position: absolute;
+
+    color: #ff4268;
+
+    font-size: 20px;
+
+    animation:
+        floatHeart linear infinite;
+
+    opacity: 0.75;
+}
+
+@keyframes floatHeart {
+
+    0% {
+        transform:
+            translateY(110vh)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    90% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform:
+            translateY(-15vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding:
+        30px
+        20px
+        80px;
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.hero-card {
+
+    width: 100%;
+
+    padding:
+        55px
+        30px;
+
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(65, 0, 20, 0.85),
+            rgba(10, 0, 5, 0.95)
+        );
+
+    border:
+        1px solid
+        rgba(255, 75, 110, 0.45);
+
+    box-shadow:
+        0 0 80px
+        rgba(255, 0, 60, 0.15),
+
+        inset 0 0 50px
+        rgba(255, 0, 60, 0.04);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* =========================================================
+   SMALL TITLE
+========================================================= */
+
+.small-title {
+
+    color: #ff9aaa;
+
+    font-size: 13px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.main-title {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(55px, 10vw, 105px);
+
+    font-style: italic;
+
+    line-height: 0.95;
+
+    color: #ff4668;
+
+    text-shadow:
+        0 0 15px rgba(255, 50, 90, 0.8),
+        0 0 35px rgba(255, 0, 50, 0.4);
+
+    margin-bottom: 20px;
+}
+
+
+.subtitle {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(28px, 5vw, 50px);
+
+    font-style: italic;
+
+    color: #ffd7df;
+}
+
+
+/* =========================================================
+   PHOTO
+========================================================= */
+
+.photo-container {
+
+    width:
+        min(420px, 85vw);
+
+    aspect-ratio: 1 / 1;
+
+    margin:
+        45px
+        auto
+        35px;
+
+    padding: 9px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff1646,
+            #ffb3c0,
+            #76001d,
+            #ff1646
+        );
+
+    box-shadow:
+        0 0 40px
+        rgba(255, 20, 65, 0.5);
+
+    animation:
+        photoGlow 3s ease-in-out infinite;
+}
+
+@keyframes photoGlow {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.025);
+
+        box-shadow:
+            0 0 75px
+            rgba(255, 20, 65, 0.7);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.photo-container img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+
+    border:
+        5px solid
+        #100006;
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.quote {
+
+    max-width: 750px;
+
+    margin:
+        25px
+        auto;
+
+    color: #ffe9ee;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(19px, 3vw, 25px);
+
+    line-height: 1.7;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.love-button {
+
+    display: inline-block;
+
+    border:
+        1px solid
+        #ff4d70;
+
+    background:
+        rgba(255, 20, 60, 0.12);
+
+    color: white;
+
+    padding:
+        15px
+        30px;
+
+    border-radius: 50px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        all 0.3s ease;
+
+    box-shadow:
+        0 0 15px
+        rgba(255, 40, 80, 0.15);
+}
+
+.love-button:hover {
+
+    background: #ff214b;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 0 30px
+        rgba(255, 30, 70, 0.7);
+}
+
+
+/* =========================================================
+   HIDDEN LOVE MESSAGE
+========================================================= */
+
+.hidden-message {
+
+    max-width: 760px;
+
+    margin:
+        30px
+        auto
+        0;
+
+    display: none;
+
+    animation:
+        appear 0.8s ease;
+}
+
+.hidden-message.active {
+    display: block;
+}
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.love-letter {
+
+    color: #ffe8ed;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 22px;
+
+    line-height: 1.8;
+}
+
+.love-letter strong {
+    color: #ff6c86;
+}
+
+
+.signature {
+
+    margin-top: 20px;
+
+    color: #ff6c86;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 38px;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.section {
+
+    margin-top: 80px;
+
+    text-align: center;
+}
+
+.section-title {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(38px, 6vw, 60px);
+
+    font-style: italic;
+
+    color: #ff8fa2;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   REASONS
+========================================================= */
+
+.reasons {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+.reason {
+
+    padding: 30px 18px;
+
+    border:
+        1px solid
+        rgba(255, 80, 110, 0.3);
+
+    border-radius: 20px;
+
+    background:
+        rgba(70, 0, 20, 0.30);
+
+    transition:
+        all 0.3s ease;
+}
+
+.reason:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        #ff5575;
+
+    box-shadow:
+        0 0 30px
+        rgba(255, 30, 70, 0.15);
+}
+
+.reason-icon {
+
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+.reason h3 {
+
+    color: #ff9aaa;
+
+    margin-bottom: 12px;
+
+    font-size: 18px;
+}
+
+.reason p {
+
+    color: #e8cbd2;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FINAL CARD
+========================================================= */
+
+.final-card {
+
+    margin-top: 80px;
+
+    padding:
+        60px
+        30px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    border:
+        1px solid
+        rgba(255, 80, 110, 0.4);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(70, 0, 20, 0.7),
+            rgba(10, 0, 5, 0.9)
+        );
+
+    box-shadow:
+        0 0 60px
+        rgba(255, 0, 50, 0.1);
+}
+
+.final-title {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(45px, 8vw, 75px);
+
+    color: #ff5575;
+
+    font-style: italic;
+
+    margin-bottom: 25px;
+}
+
+.final-text {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #ffe8ed;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 22px;
+
+    line-height: 1.8;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 70px;
+
+    color: #c58d99;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .reasons {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .hero-card {
+
+        padding:
+            45px
+            20px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .container {
+
+        padding:
+            15px
+            12px
+            60px;
+    }
+
+    .hero-card {
+
+        padding:
+            40px
+            15px;
+    }
+
+    .reasons {
+
+        grid-template-columns: 1fr;
+    }
+
+    .photo-container {
+
+        width:
+            min(320px, 82vw);
+    }
+
+    .love-letter {
+
+        font-size: 19px;
+    }
+
+    .signature {
+
+        font-size: 32px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     FLOATING HEARTS
+======================================================== -->
+
+<div class="hearts" id="hearts"></div>
+
+
+<div class="container">
+
+
+<!-- =======================================================
+     HERO
+======================================================== -->
+
+<section class="hero">
+
+<div class="hero-card">
+
+    <div class="small-title">
+        A Little Birthday Surprise For You
+    </div>
+
+
+    <h1 class="main-title">
+        Happy Birthday
+    </h1>
+
+
+    <h2 class="subtitle">
+        To The Love Of My Life ❤️
+    </h2>
+
+
+    <!-- YOUR PHOTO -->
+    <div class="photo-container">
+
+        <!--
+            IMPORTANT:
+            Put your uploaded photo in the same
+            GitHub folder as this index.html.
+
+            Rename the photo:
+
+            love-photo.jpg
+        -->
+
+        <img
+            src="love-photo.jpg"
+            alt="Our beautiful memories"
+        >
+
+    </div>
+
+
+    <p class="quote">
+
+        “I don't need a perfect life.
+        I only need a life where I get to
+        love you, laugh with you, and choose
+        you — again and again.”
+
+    </p>
+
+
+    <button
+        class="love-button"
+        id="loveButton">
+
+        ❤️ Open My Heart
+
+    </button>
+
+
+    <!-- HIDDEN MESSAGE -->
+
+    <div
+        class="hidden-message"
+        id="hiddenMessage">
+
+        <p class="love-letter">
+
+            On your special day, I just want you to know
+            how incredibly grateful I am that you are in my life.
+
+            <br><br>
+
+            You make ordinary moments feel special.
+            You make my happiest days even brighter,
+            and somehow even the difficult days feel
+            easier when I have you.
+
+            <br><br>
+
+            I hope this birthday brings you all the happiness,
+            success, peace and love that your heart deserves.
+
+            <br><br>
+
+            And if I could make one birthday wish for myself,
+            it would be simple:
+
+            <br><br>
+
+            <strong>
+                I want to keep making beautiful memories
+                with you for a very, very long time.
+            </strong>
+
+        </p>
+
+
+        <div class="signature">
+
+            Forever yours, with all my love ❤️
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =======================================================
+     WHY I LOVE YOU
+======================================================== -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Why I Love You
+    </h2>
+
+
+    <div class="reasons">
+
+
+        <div class="reason">
+
+            <div class="reason-icon">
+                💗
+            </div>
+
+            <h3>
+                You're My Peace
+            </h3>
+
+            <p>
+                With you, love feels safe,
+                warm, peaceful and like home.
+            </p>
+
+        </div>
+
+
+
+        <div class="reason">
+
+            <div class="reason-icon">
+                ♾️
+            </div>
+
+            <h3>
+                You Understand Me
+            </h3>
+
+            <p>
+                You understand the things
+                I cannot always explain with words.
+            </p>
+
+        </div>
+
+
+
+        <div class="reason">
+
+            <div class="reason-icon">
+                ✨
+            </div>
+
+            <h3>
+                You Inspire Me
+            </h3>
+
+            <p>
+                You make me want to become
+                a better version of myself.
+            </p>
+
+        </div>
+
+
+
+        <div class="reason">
+
+            <div class="reason-icon">
+                🌹
+            </div>
+
+            <h3>
+                You're My Forever
+            </h3>
+
+            <p>
+                Today, tomorrow and every
+                beautiful day after that.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     LOVE QUOTE
+======================================================== -->
+
+<section class="final-card">
+
+    <h2 class="section-title">
+        One More Wish...
+    </h2>
+
+
+    <p class="final-text">
+
+        “If I could give you one thing for your birthday,
+        I would give you the ability to see yourself
+        through my eyes.
+
+        <br><br>
+
+        Then you would finally understand just how
+        precious, loved, beautiful and unforgettable
+        you truly are.”
+
+    </p>
+
+
+    <h2 class="final-title">
+
+        Happy Birthday,
+        My Love ❤️
+
+    </h2>
+
+
+    <p class="final-text">
+
+        May your smile always stay bright,
+        may your dreams come true,
+        and may our story keep becoming
+        more beautiful with every passing year.
+
+    </p>
+
+</section>
+
+
+
+<!-- =======================================================
+     FOOTER
+======================================================== -->
+
+<footer>
+
+    Made with ❤️ specially for you
+
+    <br><br>
+
+    © 2026 • With Love
+
+</footer>
+
+
+</div>
+
+
+
+<!-- =======================================================
+     JAVASCRIPT
+======================================================== -->
+
+<script>
+
+/* =========================================================
+   CREATE FLOATING HEARTS
+========================================================= */
+
+const heartsContainer =
+    document.getElementById("hearts");
+
+
+const heartSymbols = [
+    "♥",
+    "❤",
+    "💕",
+    "💗",
+    "♡",
+    "✦"
+];
+
+
+for (let i = 0; i < 45; i++) {
+
+    const heart =
+        document.createElement("div");
+
+    heart.className = "heart";
+
+
+    heart.innerHTML =
+        heartSymbols[
+            Math.floor(
+                Math.random() *
+                heartSymbols.length
+            )
+        ];
+
+
+    heart.style.left =
+        Math.random() * 100 + "%";
+
+
+    heart.style.fontSize =
+        (10 + Math.random() * 25) + "px";
+
+
+    heart.style.animationDuration =
+        (6 + Math.random() * 10) + "s";
+
+
+    heart.style.animationDelay =
+        (-Math.random() * 12) + "s";
+
+
+    heartsContainer.appendChild(heart);
+}
+
+
+/* =========================================================
+   OPEN HEART BUTTON
+========================================================= */
+
+const loveButton =
+    document.getElementById("loveButton");
+
+
+const hiddenMessage =
+    document.getElementById("hiddenMessage");
+
+
+loveButton.addEventListener(
+    "click",
+    function () {
+
+        hiddenMessage.classList.toggle("active");
+
+
+        if (
+            hiddenMessage.classList.contains("active")
+        ) {
+
+            loveButton.innerHTML =
+                "💖 My Heart Is Open";
+
+        } else {
+
+            loveButton.innerHTML =
+                "❤️ Open My Heart";
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   EXTRA HEART BURST WHEN BUTTON IS CLICKED
+========================================================= */
+
+loveButton.addEventListener(
+    "click",
+    function () {
+
+        for (let i = 0; i < 12; i++) {
+
+            const heart =
+                document.createElement("div");
+
+            heart.innerHTML = "❤️";
+
+            heart.style.position = "fixed";
+
+            heart.style.left =
+                "50%";
+
+            heart.style.top =
+                "50%";
+
+            heart.style.zIndex =
+                "9999";
+
+            heart.style.pointerEvents =
+                "none";
+
+            heart.style.fontSize =
+                "20px";
+
+
+            const angle =
+                Math.random() * Math.PI * 2;
+
+
+            const distance =
+                100 + Math.random() * 250;
+
+
+            const x =
+                Math.cos(angle) * distance;
+
+
+            const y =
+                Math.sin(angle) * distance;
+
+
+            heart.animate(
+
+                [
+                    {
+                        transform:
+                            "translate(-50%, -50%) scale(0.5)",
+
+                        opacity: 1
+                    },
+
+                    {
+                        transform:
+                            `translate(
+                                calc(-50% + ${x}px),
+                                calc(-50% + ${y}px)
+                            )
+                            scale(1.5)`,
+
+                        opacity: 0
+                    }
+                ],
+
+                {
+                    duration:
+                        1000 + Math.random() * 700,
+
+                    easing:
+                        "ease-out"
+                }
+
+            );
+
+
+            document.body.appendChild(heart);
+
+
+            setTimeout(
+                () => heart.remove(),
+                1800
+            );
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>
